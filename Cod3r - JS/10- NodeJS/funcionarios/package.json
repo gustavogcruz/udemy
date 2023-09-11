@@ -1,0 +1,18 @@
+{
+  "name": "funcionarios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "funcionarios.js",
+  "_comment1": "dependencies: ^ - minor/fix 1.*.* , ~ - fix 1.4.*, nada, nada - só a versão citada",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}

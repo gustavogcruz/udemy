@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;fundamentos.Wrapper&apos; to &apos;Wrappers&apos;&#x0D;&#x0A;- Original project: &apos;exercicios&apos;&#x0D;&#x0A;- Original element: &apos;fundamentos.Wrapper&apos;&#x0D;&#x0A;- Renamed element: &apos;fundamentos.Wrappers&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Wrapper&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;fundamentos{Wrapper.java[Wrapper" matchStrategy="1" name="Wrappers" qualified="false" references="true" similarDeclarations="false" stamp="1636726605441" textual="false" version="1.0"/>
+</session>

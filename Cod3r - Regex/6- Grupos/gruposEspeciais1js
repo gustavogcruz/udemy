@@ -1,0 +1,15 @@
+const texto1 = 'João é calmo, mas no trânsito fica nervoso.'
+
+console.log(texto1.match(/[\wÀ-ú]+/gi))
+
+// Positive lookhead
+console.log(texto1.match(/[\wÀ-ú]+(?=,)/gi)) // ?=, - palavra que na frente tem uma virgula.
+
+console.log(texto1.match(/[\wÀ-ú]+(?=\.)/gi)) // ?=, - palavra que na frente tem um ponto.
+
+console.log(texto1.match(/[\wÀ-ú]+(?=, mas)/gi)) // ?=, - palavra que na frente tem uma virgula e a palavra 'mas'. 
+
+// Negative lookhead
+console.log(texto1.match(/[\wÀ-ú]+\b(?!,)/gi))
+
+console.log(texto1.match(/[\wÀ-ú]+[\s|\.](?!,)/gi))

@@ -1,0 +1,9 @@
+Apostila & Repositório
+
+Apostila: http://files.cod3r.com.br/apostila-regex.pdf
+
+Repositório: https://github.com/cod3rcursos/curso-regex
+
+Regex Online
+
+https://regex101.com/

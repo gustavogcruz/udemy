@@ -1,0 +1,13 @@
+package oo.composicao.desafio;
+
+public class CompraTeste {
+	
+	public static void main(String[] args) {
+		
+		Cliente cliente1 = new Cliente("Luciana");
+		
+		Compra compra1 = new Compra();
+		
+	}
+
+}

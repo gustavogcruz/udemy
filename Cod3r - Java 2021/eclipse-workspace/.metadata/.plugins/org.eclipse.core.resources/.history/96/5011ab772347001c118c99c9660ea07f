@@ -1,0 +1,16 @@
+package controle;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class DesafioDiaSemana {
+	
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in).useLocale(Locale.US);
+		
+		System.out.println("Digite o nome do dia: ");
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+package classe;
+
+public class ValorVsReferencia {
+	
+	public static void main(String[] args) {
+		
+		double a = 2;
+		double b = a;
+		
+		a++;
+		b--; // atribuição por valor
+		
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		
+		
+		Data d1 = new Data();
+		Data d2 = new Data();
+				
+		d1 = d2;
+		
+		System.out.println("d1 = " + d1);
+		System.out.println("d2 = " + d2);
+		
+		
+	}
+
+}

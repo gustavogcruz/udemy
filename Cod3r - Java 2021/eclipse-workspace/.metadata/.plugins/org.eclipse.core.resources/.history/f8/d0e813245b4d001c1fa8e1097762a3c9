@@ -1,0 +1,42 @@
+package classe;
+
+public class Produto {
+
+	String nome;
+	double preco;
+	static double desconto = 0.25; 
+
+	//construtores modificados.
+	//O construtor padrão precisa ser declarado de forma explicita.
+	
+	Produto () {
+		
+	}
+
+	
+	Produto(String nomeInicial) {
+		nome = nomeInicial;
+
+	}
+	
+	Produto(String nomeInicial, double precoInicial) {
+		nome = nomeInicial;
+		preco = precoInicial;
+	}
+	
+	/*Produto(String nomeInicial, double precoInicial, double descontoInicial) {
+		nome = nomeInicial;
+		preco = precoInicial;
+		desconto = descontoInicial;
+	}*/
+	
+
+	double precoComDesconto() {
+		return preco * (1 - desconto);
+	}
+
+	double precoComDesconto(double descontoDoGerente) {
+		return preco * (1 - desconto + descontoDoGerente);
+	}
+
+}

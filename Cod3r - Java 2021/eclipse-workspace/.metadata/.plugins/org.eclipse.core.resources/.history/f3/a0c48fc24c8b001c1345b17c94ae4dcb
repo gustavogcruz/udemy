@@ -1,0 +1,9 @@
+package oo.composicao.desafio;
+
+public class CompraTeste {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

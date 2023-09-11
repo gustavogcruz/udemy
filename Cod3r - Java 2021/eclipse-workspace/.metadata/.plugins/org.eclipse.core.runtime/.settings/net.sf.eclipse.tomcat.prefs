@@ -1,0 +1,12 @@
+configMode=serverFile
+contextsDir=C\:\\apache-tomcat\\conf\\Catalina\\localhost
+eclipse.preferences.version=1
+jvmParameters=-Xms128m+-Xmx256m+-Duser.language%3Dpt+-Duser.region%3DBR+-XX%3AMaxPermSize%3D256m+-XX%3A%2BDisableExplicitGC+-XX%3A%2BUseParallelGC+-XX%3ANewRatio%3D3+-server;
+managerPassword=sabara688
+managerUrl=http\://localhost\:8080/manager
+managerUser=tomcat
+projectsInSourcePath=tdr;
+tomcatConfigFile=C\:\\apache-tomcat\\conf\\server.xml
+tomcatDir=C\:\\apache-tomcat
+tomcatJRE=1635267881653
+tomcatVersion=tomcatV9

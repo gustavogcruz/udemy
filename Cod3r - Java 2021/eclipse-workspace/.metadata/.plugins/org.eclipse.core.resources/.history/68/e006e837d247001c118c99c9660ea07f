@@ -1,0 +1,19 @@
+package controle;
+
+public class SwitchComBreak {
+	
+	public static void main(String[] args) {
+		
+		String conceito = "";
+		int nota = 7;
+		
+		switch (nota) {
+		case 10:
+			System.out.println("Conceito A");
+			break;
+
+		}
+		System.out.println("Conceito é " + conceito);
+	}
+
+}

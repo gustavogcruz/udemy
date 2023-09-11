@@ -1,0 +1,13 @@
+package classe;
+
+public class PrimeiroTrauma {
+	
+	int a = 3; // não pode mexer nessa linha
+	
+	public static void main(String[] args) {
+		
+		System.out.println(a);
+	
+	}
+
+}

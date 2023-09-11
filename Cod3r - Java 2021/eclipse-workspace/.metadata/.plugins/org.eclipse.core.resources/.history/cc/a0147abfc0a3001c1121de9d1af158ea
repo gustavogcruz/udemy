@@ -1,0 +1,14 @@
+package lambdas;
+
+public class Calcular {
+
+	public static void main(String[] args) {
+	
+		Calculo soma = new Somar ();
+		Calculo multiplicacao = new Multiplicar();
+		
+		
+
+	}
+
+}

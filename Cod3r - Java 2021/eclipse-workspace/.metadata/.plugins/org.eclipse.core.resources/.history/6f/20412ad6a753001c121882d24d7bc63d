@@ -1,0 +1,13 @@
+package arrays;
+
+public class Exercicio {
+	
+	public static void main(String[] args) {
+		
+		double [] notasAluno = new double[6];
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wm-attrib>.terceiro .ultimo</span></div>
+    <script>   
+    
+        const selecionar = seletor =>
+        document.querySelectorAll(seletor).forEach (
+            e => e.classList.add('destaque')
+        )
+
+        const descelecionar = seletor =>
+        document.querySelectorAll(seletor).forEach (
+            e => e.classList.remove('destaque')
+        )
+        
+        /*usando seletores CSS*/
+        // document.querySelector('#primeiro').classList.add('destaque')
+
+        selecionar('#primeiro')
+        descelecionar('#primeiro')
+        
+        selecionar('div')
+        descelecionar('*')
+
+        selecionar('.terceiro.ultimo')
+        descelecionar('*')
+
+        selecionar(':not(#primeiro)') /*seleciona todos, menos o #primeiro */
+        descelecionar('*')
+
+        selecionar(':nth-child(1)') /* filhos de algum elemento */
+        descelecionar('*')
+
+        selecionar('div:nth-of-type(1)') /* primeiro elemento do tipo DIV */
+        descelecionar('*')
+
+        selecionar('[wm-attrib]')
+        descelecionar('*')
+
+    </script>
+</body>
+</html>

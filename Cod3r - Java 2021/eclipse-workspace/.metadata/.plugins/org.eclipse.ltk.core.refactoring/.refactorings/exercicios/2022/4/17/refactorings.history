@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;aprovadores&apos; in &apos;lambdas.Foreach.main(...)&apos; to &apos;aprovados&apos;&#x0D;&#x0A;- Original project: &apos;exercicios&apos;&#x0D;&#x0A;- Original element: &apos;lambdas.Foreach.main(String[]).aprovadores&apos;&#x0D;&#x0A;- Renamed element: &apos;aprovadores&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;aprovadores&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;lambdas{Foreach.java[Foreach~main~\[QString;@aprovadores!145!219!158!168!QList\&lt;QString;&gt;;!0!false" name="aprovados" references="true" stamp="1650486436172" version="1.0"/>
+</session>

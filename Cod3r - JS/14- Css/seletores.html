@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+
+        /* seletor universal */
+        * {
+            color: #ff0;
+            background-color: #f77;
+        }
+        /* seletor classe     */
+        .tag {
+            color: #ff0;
+            background-color: #f77;
+        }
+         /* seletor de ID    */
+        #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        }
+            /* dentro de $aninhado pega a div */
+        #aninhado > div {
+            color: #ff0;
+            background-color: #f77;        
+        }      
+            
+            /* */
+        #aninhado > div {
+            color: #ff0;
+            background-color: #f77;
+        }
+            
+            /* dentro de $aninhado pega a div */
+        #aninhado > div {
+            color: #ff0;
+            background-color: #f77;
+        }
+            
+            /* seletor de descendente  */
+        #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        }
+            
+            /* simbling adjacente */
+        p + ul {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+            /* simbling geral */
+        p ~ ol {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+            /* seletor propriedade */
+        [feira] {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+            /* seletor propriedade com atributo */
+        [feira=casa] {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+            /* seletor propriedade com possivel atributo */
+        [feira~=escritorio] {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+            /* seletor propriedade com determinado trecho de atributo */
+        [feira*=sa] {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+            /* Primeiro filho de determinado elemento */
+        span:nth-child(1) {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+            /* */
+        section > :nth-child(odd), ul, p {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+            /* dentro de section. segundo elemento do tipo span */
+        section > span:nth-of-type(2) {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+            
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
