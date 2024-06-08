@@ -1,3 +1,2 @@
-# Udemy Docker
-
-https://www.udemy.com/course/docker-zero-avancado/
+# Udemy
+https://www.udemy.com
