@@ -1,0 +1,6 @@
+---
+alwaysApply: true
+---
+Sempre que criar um componente, inclua ele na pasta components
+Se ele pertencer especificamente a alguma página, crie a pasta da página para inserir o componente
+Exemplo: Card da Home --> components/Home/Card.jsx
