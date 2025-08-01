@@ -20,13 +20,17 @@ function Contato() {
     console.log('Dados do formulário:', data);
     alert('Contato enviado com sucesso!');
   };
-
+  
   return (
     <div className="container mt-5">
-      <h1>Contato</h1>
-      <p>Entre em contato conosco através do formulário abaixo:</p>
+      <h1 className="mb-4">Contato</h1>
+      <p className="lead">
+        Entre em contato conosco através do formulário abaixo:
+      </p>
       
-      <ContactForm onSubmit={handleContactSubmit} />
+      <div className="mt-5">
+        <ContactForm onSubmit={handleContactSubmit} />
+      </div>
     </div>
   );
 }

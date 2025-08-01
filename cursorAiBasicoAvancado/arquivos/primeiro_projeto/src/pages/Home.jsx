@@ -3,10 +3,21 @@ import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 import { news } from '../data/news';
 import LatestNews from '../components/Home/LatestNews';
+import PromotionBanner from '../components/Home/PromotionBanner';
 
 function Home() {
   return (
     <div className="container mt-5">
+      {/* Banner de Promoções */}
+      <PromotionBanner 
+        title="OS MELHORES COMPUTADORES DO MUNDO!"
+        subtitle="Conheça os produtos da nossa loja e aproveite as promoções"
+        promotionsText="PROMOÇÕES"
+        newsText="NOVIDADES"
+        promotionsLink="/promocoes"
+        newsLink="/novidades"
+      />
+
       <div className="p-5 mb-4 bg-light rounded-3">
         <div className="container-fluid py-5">
           <h1 className="display-5 fw-bold">Bem-vindo à E-Tech</h1>

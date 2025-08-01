@@ -3,52 +3,72 @@ import React from 'react';
 function Sobre() {
   return (
     <div className="container mt-5">
-      <h1 className="mb-4">Sobre a Empresa</h1>
+      <h1 className="mb-4">Transformando Sonhos em Realidade Digital</h1>
       <p className="lead">
-        Aqui você encontra informações sobre a nossa empresa. Somos dedicados a
-        fornecer as melhores soluções para nossos clientes.
+        Imagine um mundo onde a tecnologia não é apenas uma ferramenta, mas uma 
+        extensão do seu potencial. É isso que fazemos: transformamos ideias em 
+        soluções que revolucionam o mercado e impulsionam o sucesso dos nossos clientes.
       </p>
 
       <div className="mt-5">
-        <h2>Nossa História</h2>
+        <h2>Uma Jornada de Inovação e Paixão</h2>
         <p>
-          Fundada em 2024, nossa empresa nasceu da paixão por tecnologia e
-          inovação. Começamos como uma pequena startup com grandes sonhos e,
-          graças à confiança de nossos clientes e ao trabalho árduo de nossa
-          equipe, crescemos e nos tornamos uma referência no mercado.
+          Em 2024, nasceu uma empresa diferente. Não apenas mais uma startup, 
+          mas uma <strong>revolução</strong> no mundo da tecnologia. Começamos com 
+          uma visão audaciosa: democratizar a inovação e tornar a tecnologia 
+          acessível a todos. Hoje, somos <strong>referência absoluta</strong> no 
+          mercado, com milhares de clientes satisfeitos e projetos que mudaram 
+          o rumo de empresas inteiras.
         </p>
       </div>
 
       <div className="mt-4">
-        <h2>Nossa Missão</h2>
+        <h2>Nossa Missão: Empoderar o Futuro</h2>
         <p>
-          Nossa missão é empoderar nossos clientes, oferecendo produtos e
-          serviços de alta qualidade que resolvam seus problemas e superem suas
-          expectativas. Buscamos constantemente a excelência em tudo o que
-          fazemos.
+          Não vendemos apenas produtos - <strong>vendemos transformação</strong>. 
+          Nossa missão é clara: empoderar cada cliente com soluções que não 
+          apenas resolvem problemas, mas <strong>criam oportunidades</strong> 
+          inimagináveis. Quando você escolhe nossa empresa, você não está 
+          apenas comprando tecnologia - está investindo no seu próprio sucesso.
         </p>
       </div>
 
       <div className="mt-4">
-        <h2>Nossos Valores</h2>
+        <h2>Os Pilares do Nosso Sucesso</h2>
         <ul>
           <li>
-            <strong>Inovação:</strong> Buscamos constantemente novas formas de
-            melhorar e inovar.
+            <strong>Inovação Sem Limites:</strong> Não seguimos tendências - 
+            <strong>criamos elas</strong>. Nossa equipe está sempre um passo à 
+            frente, desenvolvendo soluções que o mercado ainda nem sonhou.
           </li>
           <li>
-            <strong>Compromisso com o Cliente:</strong> A satisfação de nossos
-            clientes é nossa prioridade.
+            <strong>Compromisso Total com o Cliente:</strong> Seu sucesso é 
+            <strong>nossa obsessão</strong>. Trabalhamos incansavelmente para 
+            superar suas expectativas e entregar resultados que impressionam.
           </li>
           <li>
-            <strong>Integridade:</strong> Agimos com honestidade e transparência em
-            todas as nossas interações.
+            <strong>Integridade Inabalável:</strong> Construímos relacionamentos 
+            baseados em <strong>confiança absoluta</strong>. Cada promessa é uma 
+            garantia, cada compromisso é sagrado.
           </li>
           <li>
-            <strong>Trabalho em Equipe:</strong> Acreditamos que juntos somos mais
-            fortes e podemos alcançar resultados extraordinários.
+            <strong>Sinergia Perfeita:</strong> Acreditamos que <strong>juntos 
+            somos invencíveis</strong>. Nossa equipe trabalha como uma máquina 
+            bem azeitada, onde cada talento se soma para criar resultados 
+            extraordinários.
           </li>
         </ul>
+      </div>
+
+      <div className="mt-5">
+        <h2>Por Que Escolher a Nossa Empresa?</h2>
+        <p>
+          <strong>Resultados comprovados</strong>, tecnologia de ponta, e uma 
+          equipe apaixonada por excelência. Quando você escolhe nossa empresa, 
+          você escolhe <strong>parceria, inovação e sucesso garantido</strong>. 
+          Junte-se aos milhares de clientes que já transformaram seus negócios 
+          conosco.
+        </p>
       </div>
     </div>
   );

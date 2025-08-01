@@ -1,24 +1,168 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Estilos gerais da aplicação */
+.App {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Estilos para centralizar o conteúdo das páginas */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-@keyframes logo-spin {
+/* Garantir que o conteúdo das páginas fique centralizado */
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+  text-align: center;
+}
+
+.container p {
+  text-align: center;
+}
+
+.container .lead {
+  text-align: center;
+}
+
+/* Centralizar cards e elementos específicos */
+.card {
+  text-align: center;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+/* Centralizar formulários */
+form {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-label {
+  text-align: center;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-check {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-check-label {
+  text-align: center;
+  margin: 0;
+}
+
+/* Centralizar componentes específicos do formulário */
+.mb-3 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.invalid-feedback {
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+/* Centralizar textarea */
+textarea.form-control {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Centralizar botões do formulário */
+form .btn {
+  margin: 0 auto;
+  display: block;
+}
+
+/* Centralizar botões */
+.btn {
+  text-align: center;
+}
+
+/* Garantir que todas as páginas fiquem centralizadas */
+.container.mt-5 {
+  text-align: center;
+}
+
+.container.mt-5 h1,
+.container.mt-5 p {
+  text-align: center;
+}
+
+/* Estilos específicos para o formulário de contato */
+.contact-form-main {
+  text-align: center !important;
+  max-width: 500px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+/* Centralizar listas */
+ul {
+  text-align: center;
+  list-style-position: inside;
+}
+
+li {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -27,16 +171,398 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Estilos específicos para a página de produto */
+.product-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.product-gallery {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-product-image {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.main-product-image:hover {
+  transform: scale(1.02);
+}
+
+.thumbnail {
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border: 2px solid #007bff !important;
+}
+
+.product-details {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.product-type {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.original-price {
+  font-size: 1.2rem;
+}
+
+.current-price {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.installment-info {
+  font-size: 0.9rem;
+}
+
+.stars {
+  font-size: 1.1rem;
+}
+
+.color-swatch {
+  transition: all 0.3s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.color-swatch.selected {
+  border: 2px solid #007bff !important;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.size-options .btn {
+  min-width: 50px;
+  height: 40px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.size-options .btn:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.quantity-selector {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 8px;
+  background: white;
+}
+
+.quantity-selector button {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.promotion-banner {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+}
+
+.promotion-banner .alert {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.description-section {
+  border-top: 1px solid #dee2e6;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.description-section h6 {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 2rem;
+  }
+  
+  .product-details {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .main-product-image {
+    height: 300px !important;
+  }
+  
+  .thumbnails-container {
+    justify-content: center;
   }
 }
 
-.card {
-  padding: 2em;
+/* Estilos do Banner de Promoções */
+.promotion-banner {
+  margin: 2rem 0;
 }
 
-.read-the-docs {
-  color: #888;
+.banner-container {
+  background: white;
+  border: 2px solid #e3f2fd;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.banner-container:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.banner-content {
+  text-align: left;
+}
+
+.banner-title {
+  color: #ff8a65;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.banner-subtitle {
+  color: #ff8a65;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  max-width: 600px;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-promotions {
+  background: transparent !important;
+  border: 2px solid #4caf50 !important;
+  color: #4caf50 !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  min-width: 140px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  font-size: 0.9rem !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  user-select: none !important;
+  cursor: pointer !important;
+}
+
+.btn-promotions:hover {
+  background: #4caf50 !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3) !important;
+  text-decoration: none !important;
+  border-color: #4caf50 !important;
+}
+
+.btn-promotions:focus {
+  color: #4caf50 !important;
+  background: transparent !important;
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25) !important;
+  border-color: #4caf50 !important;
+}
+
+.btn-promotions:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-news {
+  background: transparent !important;
+  border: 2px solid #ff8a65 !important;
+  color: #ff8a65 !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  min-width: 140px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  font-size: 0.9rem !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  user-select: none !important;
+  cursor: pointer !important;
+}
+
+.btn-news:hover {
+  background: #ff8a65 !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(255, 138, 101, 0.3) !important;
+  text-decoration: none !important;
+  border-color: #ff8a65 !important;
+}
+
+.btn-news:focus {
+  color: #ff8a65 !important;
+  background: transparent !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 138, 101, 0.25) !important;
+  border-color: #ff8a65 !important;
+}
+
+.btn-news:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsividade do Banner */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 1.8rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+  
+  .banner-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .btn-promotions,
+  .btn-news {
+    text-align: center;
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .banner-container {
+    padding: 1.5rem;
+  }
+}
+
+/* Melhorias adicionais para os botões */
+.btn-promotions,
+.btn-news {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+}
+
+.btn-promotions:active,
+.btn-news:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Garantir que os links não herdem estilos indesejados */
+.banner-buttons a {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.banner-buttons a:hover {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.banner-buttons a:focus {
+  outline: none !important;
+}
+
+/* Sobrescrever qualquer estilo do Bootstrap que possa interferir */
+.banner-buttons .btn-promotions,
+.banner-buttons .btn-news {
+  all: unset;
+  display: inline-block !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  color: inherit !important;
+}
+
+/* Garantir que as cores sejam aplicadas corretamente */
+.banner-buttons .btn-promotions {
+  color: #4caf50 !important;
+}
+
+.banner-buttons .btn-news {
+  color: #ff8a65 !important;
+}
+
+/* Estados específicos para garantir visibilidade do texto */
+.banner-buttons .btn-promotions,
+.banner-buttons .btn-news {
+  color: inherit !important;
+}
+
+.banner-buttons .btn-promotions {
+  color: #4caf50 !important;
+}
+
+.banner-buttons .btn-news {
+  color: #ff8a65 !important;
+}
+
+/* Hover states específicos */
+.banner-buttons .btn-promotions:hover {
+  color: white !important;
+  background: #4caf50 !important;
+}
+
+.banner-buttons .btn-news:hover {
+  color: white !important;
+  background: #ff8a65 !important;
 }

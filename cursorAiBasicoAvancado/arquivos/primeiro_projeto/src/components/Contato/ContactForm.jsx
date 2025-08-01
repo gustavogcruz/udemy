@@ -39,7 +39,10 @@ function ContactForm({ onSubmit, className = '' }) {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleFormSubmit)} className={className}>
+    <form 
+      onSubmit={handleSubmit(handleFormSubmit)} 
+      className={`contact-form-main ${className}`}
+    >
       <FormInput
         id="name"
         label="Nome"
@@ -97,7 +100,10 @@ function ContactForm({ onSubmit, className = '' }) {
         error={errors.newsletter}
       />
 
-      <button type="submit" className="btn btn-primary">
+      <button 
+        type="submit" 
+        className="btn btn-primary"
+      >
         Enviar
       </button>
     </form>
