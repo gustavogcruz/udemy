@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Organizador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-check-circle"></i> Todo List</h1>
+            <p>Organize suas tarefas de forma eficiente</p>
+        </header>
+
+        <div class="todo-container">
+            <!-- Botão para abrir modal de nova tarefa -->
+            <div class="new-task-section">
+                <button class="btn-new-task" id="newTaskBtn">
+                    <i class="fas fa-plus"></i>
+                    Nova Tarefa
+                </button>
+                <p class="new-task-hint">Clique para criar uma nova tarefa</p>
+            </div>
+
+            <!-- Campo de Busca -->
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Buscar tarefas por título..."
+                            autocomplete="off"
+                        >
+                        <button class="clear-search" id="clearSearch" title="Limpar busca">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="search-info" id="searchInfo" style="display: none;">
+                        <span id="searchResultsCount">0</span> tarefa(s) encontrada(s)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-list"></i>
+                    Todas
+                </button>
+                <button class="filter-btn" data-filter="pending">
+                    <i class="fas fa-clock"></i>
+                    Pendentes
+                </button>
+                <button class="filter-btn" data-filter="completed">
+                    <i class="fas fa-check"></i>
+                    Concluídas
+                </button>
+            </div>
+
+            <!-- Estatísticas -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalTasks">0</span>
+                    <span class="stat-label">Total</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="pendingTasks">0</span>
+                    <span class="stat-label">Pendentes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="completedTasks">0</span>
+                    <span class="stat-label">Concluídas</span>
+                </div>
+            </div>
+
+            <!-- Lista de tarefas -->
+            <div class="todo-list-container">
+                <ul class="todo-list" id="todoList">
+                    <!-- As tarefas serão inseridas aqui dinamicamente -->
+                </ul>
+                
+                <!-- Mensagem quando não há tarefas -->
+                <div class="empty-state" id="emptyState">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Nenhuma tarefa encontrada</h3>
+                    <p>Adicione uma nova tarefa para começar!</p>
+                </div>
+            </div>
+
+            <!-- Botão para limpar tarefas concluídas -->
+            <div class="actions">
+                <button class="btn-clear" id="clearCompleted">
+                    <i class="fas fa-trash"></i>
+                    Limpar Concluídas
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para adicionar nova tarefa -->
+    <div class="modal-overlay" id="addTaskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <i class="fas fa-plus-circle"></i>
+                    Criar Nova Tarefa
+                </h2>
+                <button class="modal-close" id="closeAddModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="addTaskForm">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="addTaskTitle">Título da Tarefa *</label>
+                        <input type="text" id="addTaskTitle" class="modal-input" placeholder="Digite o título da tarefa..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="addTaskDifficulty">Dificuldade *</label>
+                        <select id="addTaskDifficulty" class="modal-select" required>
+                            <option value="">Selecione a dificuldade</option>
+                            <option value="easy">🟢 Fácil</option>
+                            <option value="medium">🟡 Média</option>
+                            <option value="hard">🔴 Difícil</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="addTaskDescription">Descrição</label>
+                        <textarea id="addTaskDescription" class="modal-textarea" rows="4" placeholder="Descrição detalhada da tarefa (opcional)..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn-modal btn-save">
+                        <i class="fas fa-plus"></i>
+                        Criar Tarefa
+                    </button>
+                    <button type="button" class="btn-modal btn-cancel" id="cancelAddTask">
+                        <i class="fas fa-times"></i>
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para editar/visualizar tarefa existente -->
+    <div class="modal-overlay" id="editTaskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <i class="fas fa-edit"></i>
+                    Editar Tarefa
+                </h2>
+                <button class="modal-close" id="closeEditModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="editTaskForm">
+                <div class="modal-body">
+                    <div class="task-status-section">
+                        <label class="task-status-label">
+                            <input type="checkbox" id="editTaskStatus" class="modal-checkbox">
+                            <span class="status-text">Marcar como concluída</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editTaskTitle">Título da Tarefa *</label>
+                        <input type="text" id="editTaskTitle" class="modal-input" placeholder="Título da tarefa" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editTaskDifficulty">Dificuldade *</label>
+                        <select id="editTaskDifficulty" class="modal-select" required>
+                            <option value="easy">🟢 Fácil</option>
+                            <option value="medium">🟡 Média</option>
+                            <option value="hard">🔴 Difícil</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editTaskDescription">Descrição</label>
+                        <textarea id="editTaskDescription" class="modal-textarea" rows="4" placeholder="Descrição detalhada da tarefa..."></textarea>
+                    </div>
+                    
+                    <div class="task-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar-plus"></i>
+                            <span>Criada: <span id="editCreatedAt">-</span></span>
+                        </div>
+                        <div class="meta-item" id="editUpdatedMeta" style="display: none;">
+                            <i class="fas fa-edit"></i>
+                            <span>Atualizada: <span id="editUpdatedAt">-</span></span>
+                        </div>
+                        <div class="meta-item" id="editCompletedMeta" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Concluída: <span id="editCompletedAt">-</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn-modal btn-save">
+                        <i class="fas fa-save"></i>
+                        Salvar Alterações
+                    </button>
+                    <button type="button" class="btn-modal btn-delete" id="deleteTaskFromEdit">
+                        <i class="fas fa-trash"></i>
+                        Excluir Tarefa
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
